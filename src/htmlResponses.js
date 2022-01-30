@@ -1,6 +1,5 @@
 const fs = require('fs');
 
-
 const getIndex = (request, response) => {
   const index = fs.readFileSync(`${__dirname}/../client/client.html`);
   response.writeHead(200, { 'Content-Type': 'text/html' });
@@ -22,7 +21,7 @@ const getPage3 = (request, response) => {
   response.end();
 };
 
-module.exports={
+module.exports = {
   getIndex,
   getPage2,
   getPage3,
